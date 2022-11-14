@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 1 KEDUNGWUNI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="xtm.png">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <!--HEADER-->
+    <div class="Header">
+      <center>
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img src="smk.png"  width="500px">
+      </div>
+      </center>
+    </div>
+    <!-- HEADER SELESAI -->
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="profil.html">PROFIL</a></li>
+            <li><a href="visimisi.html">VISI-MISI</a></li>
+            <li><a href="galeri.html">GALERY</a></li>
+            <li><a href="artikel.html">ARTIKEL</a></li>
+            <li><a href="kontak.html">KONTAK</a></li>
+        </ul>
+    </div>
+    <br>
+    <!-- NAVBAR SELESAI -->
+
+<!-- SLIDESHOW -->
+<h2 style="text-align:center">SMK NEGERI 1 KEDUNGWUNI</h2>
+<br>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="s1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="s6.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="s7.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="s8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="s10.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="s13.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="s1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Asesmen Nasional Berbasis Komputer">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="s6.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pangkalan SMK Negeri 1 Kedungwuni torehkan prestasi">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="s7.jpg" style="width:100%" onclick="currentSlide(3)" alt="Proyek Penguatan Profil Pelajar Pancasila">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="s8.jpg" style="width:100%" onclick="currentSlide(4)" alt="Upacara Bendera 17 Agustus 2022 SMK Negeri 1 Kedungwuni">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="s10.jpg" style="width:100%" onclick="currentSlide(5)" alt="Ujian Praktik Kejuruan Bersama LSP">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="s13.jpg" style="width:100%" onclick="currentSlide(6)" alt="Guru-guru SMKN 1 Kedungwuni">
+    </div>
+  </div>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!-- SLIDESHOW SELESAI -->
+<br>
+
+<!-- ARTIKEL KOLOM -->
+<center>
+<div class="row">
+  <div class="col-lg-5 col-md-6 offset-lg-1">
+    <img src="s1.jpg" height="150px" width="210px">
+    <h5>Asesmen Nasional Berbasis Komputer</h5>
+    <p>Asesmen Nasional Berbasis Komputer ( ANBK ) adalah program penilaian mutu setiap sekolah , madrasah dan program kesetaraan pada jenjang dasar dan menengah. Penilaian ini dilakukan berdasarkan kemampuan dasar siswa seperti literasi, numerasi dan karakter.</p>
+  </div>
+  <br>
+  <div class="col-lg-5 col-md-6 offset-lg-1">
+    <img src="s4.jpg" height="150px" width="210px">
+    <h5>Pangkalan SMK Negeri 1 Kedungwuni torehkan prestasi</h5>
+    <p>Kegiatan Raimuna Cabang (Raicab) VIII Kwartir Cabang (Kwarcab) Kabupaten Pekalongan tahun 2022 diselenggarakan pada tanggal 10 s/d 13 September 2022 di Bumi Perkemahan Objek Wisata Linggo Asri Kecamatan Kajen dan dibuka oleh Sekretaris Daerah Kabupaten Pekalongan M Yulian Akbar.</p>
+  </div>
+  <br>
+  <div class="col-lg-5 col-md-6 offset-lg-1">
+    <img src="s7.jpg" height="150px" width="210px">
+    <h5>Proyek Penguatan Profil Pelajar Pancasila</h5>
+    <p>Proyek Penguatan Profil Pelajar Pancasila (P5) merupakan salah satu bentuk pembelajaran kurikulum merdeka yang diterapkan di SMK Negeri 1 Kedungwuni. Dalam kegiatan ini tema P5 yang diangkat yaitu Budaya Kerja, hal itu disesuaikan dengan esensi mendasar kolaborasi SMK dengan dunia kerja tentang penerapan Budaya Kerja Industri di sekolah.</p>
+  </div>
+  <br>
+  <div class="col-lg-5 col-md-6 offset-lg-1">
+    <img src="s8.jpg" height="150px" width="210px">
+    <h5>Upacara Bendera 17 Agustus 2022 SMK Negeri 1 Kedungwuni</h5>
+    <p>Upacara pengibaran bendera merah putih dalam rangka memperingati Hari Ulang Tahun (HUT) ke-77 RI merupakan momen sakral yang dinantikan rakyat Indonesia. Momen upacara pengibaran tersebut dilaksanakan di beberapa wilayah di Indonesia pada Rabu, 17 Agustus 2022.</p>
+  </div>
+</div>
+</center>
+<!-- ARTIKEL KOLOM SELESAI -->
+<br>
+<br>
+
+<!-- BANNER -->
+<div class="main-image">
+  <div class="banner">
+      <h1><span>SKENSA</span></h1>
+      <span class="cen">SMKN 1 Kedungwuni</span>
+      <a class="button" href="https://smkn1kedungwuni.sch.id">Click Here</a>
+  </div>
+</div>
+<!-- BANNER SELESAI -->
+<br>
+<br>
+<!-- FOTO GURU -->
+<center>
+  <h5>Foto Guru-guru</h5>
+<div class="fotoguru">
+  <img class="col-lg-4 col-md-12 mb-4 mb-lg-0" src="s13.jpg">
+  <img class="col-lg-4 col-md-12 mb-4 mb-lg-0" src="s10.jpg">
+</div>
+</center>
+<!-- FOTO GURU SELESAI -->
+
+
+<!-- KATAK-KATA -->
+<div class="quote" style="width:50%">
+  <span style="font-size:100px">❝</span><br>
+  <p style="margin-top:-60px"><i><b>Pendidikan bukan cuma pergi ke sekolah dan mendapatkan gelar. Tapi juga soal memperluas pengetahuan dan menyerap ilmu kehidupan.</b></i></p>
+</div>
+<!-- QUOTE  SELESAI-->
+<br>
+<br>
+<br>
+<!-- FOOTER -->
+<div class="container-footer">
+  <small>Copyright &copy; 2022 - Dicky Pratama Putra. All Rights Reserved.</small>
+</div>
+<!-- FOOTER SELESAI -->
+</body>
+</html>
